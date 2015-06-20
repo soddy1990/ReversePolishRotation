@@ -96,18 +96,18 @@ int evalRPN(vector<string> &tokens) {
 	if(operators.empty()){
 		return operands.top();
 	}/*
-	while(!operators.empty()||!operands.empty()){
-		int b = operands.top();
-		operands.pop();
-		if(operands.empty()){
-			return b;
-		}
-		int a = operands.top();
-		operands.pop();
-		string operater = operators.top();
-		operators.pop();
-		operands.push(computation(a,b,operater));
-	}*/
+	 while(!operators.empty()||!operands.empty()){
+	 int b = operands.top();
+	 operands.pop();
+	 if(operands.empty()){
+	 return b;
+	 }
+	 int a = operands.top();
+	 operands.pop();
+	 string operater = operators.top();
+	 operators.pop();
+	 operands.push(computation(a,b,operater));
+	 }*/
 	return operands.top();
 }
 
@@ -121,4 +121,7 @@ void main(){
 	vstr.push_back("+");
 	cout<<evalRPN(vstr);
 	getchar();
+
+
+
 }
